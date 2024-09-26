@@ -26,7 +26,7 @@ const greeting = {
     "👨‍💻 Unreal Engine & C++ Programmer | Expert in complex systems & gameplay mechanics 🎮 | Let's create something amazing! 🚀"
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXK7Ldlu/view?usp=sharing", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -36,12 +36,7 @@ const socialMediaLinks = {
   github: "https://github.com/davidlespada",
   linkedin: "https://www.linkedin.com/in/david-l%C3%B3pez-89177a214/",
   gmail: "davidlespada@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
+  // You can add more social media links here
   display: true // Set true to display this section, defaults to false
 };
 
@@ -49,72 +44,68 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle:
+    "Experienced Unreal Engine Programmer Specializing in Complex Systems and Gameplay Mechanics",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Develop robust core systems and base architecture in Unreal Engine using C++ and Blueprints"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Expert in gameplay programming, including complex gameplay systems and mechanics"
+    ),
+    emoji(
+      "⚡ Proficient in animation programming, character locomotion systems, and integrating GAS and Common UI"
+    ),
+    emoji(
+      "⚡ Develop tools and editor scripting to streamline workflows for artists and designers"
+    ),
+    emoji(
+      "⚡ Strong collaboration with cross-functional teams to deliver high-quality game features"
+    ),
+    emoji(
+      "⚡ Experience in creating games from scratch and participating in game jams"
     )
   ],
 
   /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
+  https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
     {
-      skillName: "html-5",
-      fontAwesomeClassname: "fab fa-html5"
+      skillName: "Unreal Engine",
+      fontAwesomeClassname: "fas fa-gamepad"
     },
     {
-      skillName: "css3",
-      fontAwesomeClassname: "fab fa-css3-alt"
+      skillName: "C++",
+      fontAwesomeClassname: "fas fa-code"
     },
     {
-      skillName: "sass",
-      fontAwesomeClassname: "fab fa-sass"
+      skillName: "Blueprints",
+      fontAwesomeClassname: "fas fa-project-diagram"
     },
     {
-      skillName: "JavaScript",
-      fontAwesomeClassname: "fab fa-js"
+      skillName: "Animation Programming",
+      fontAwesomeClassname: "fas fa-running"
     },
     {
-      skillName: "reactjs",
-      fontAwesomeClassname: "fab fa-react"
+      skillName: "GAS (Gameplay Ability System)",
+      fontAwesomeClassname: "fas fa-cogs"
     },
     {
-      skillName: "nodejs",
-      fontAwesomeClassname: "fab fa-node"
+      skillName: "Common UI",
+      fontAwesomeClassname: "fas fa-tv"
     },
     {
-      skillName: "swift",
-      fontAwesomeClassname: "fab fa-swift"
+      skillName: "Tools & Scripting",
+      fontAwesomeClassname: "fas fa-tools"
     },
     {
-      skillName: "npm",
-      fontAwesomeClassname: "fab fa-npm"
+      skillName: "Team Collaboration",
+      fontAwesomeClassname: "fas fa-users"
     },
     {
-      skillName: "sql-database",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {
-      skillName: "aws",
-      fontAwesomeClassname: "fab fa-aws"
-    },
-    {
-      skillName: "firebase",
-      fontAwesomeClassname: "fas fa-fire"
-    },
-    {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
-    },
-    {
-      skillName: "docker",
-      fontAwesomeClassname: "fab fa-docker"
+      skillName: "Git",
+      fontAwesomeClassname: "fab fa-git-alt"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -126,23 +117,15 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
-      subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
+      schoolName: "PrimerFrame",
+      logo: require("./assets/images/primerframeLogo.png"), // Replace with the correct path to your logo
+      subHeader: "Diploma in Game Development",
+      duration: "2019",
+      desc: "Studied game development focusing on programming, animation, and 3D art.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Developed final project as main programmer, implementing base systems, player programming, pushable items, and UIs",
+        "Learned how different areas of game development assemble together"
       ]
-    },
-    {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
     }
   ]
 };
@@ -153,19 +136,19 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      Stack: "Gameplay Programming",
+      progressPercentage: "95%"
     },
     {
-      Stack: "Backend",
-      progressPercentage: "70%"
+      Stack: "Unreal Engine Development",
+      progressPercentage: "90%"
     },
     {
-      Stack: "Programming",
-      progressPercentage: "60%"
+      Stack: "Tools & Editor Scripting",
+      progressPercentage: "85%"
     }
   ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  displayCodersrank: false // Set true to display CodersRank badges, defaults to false
 };
 
 // Work experience section
@@ -174,35 +157,36 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "Lead Unreal Engine Programmer",
+      company: "Daloar Studios",
+      companylogo: require("./assets/images/daloarStudiosLogo.png"), // Replace with the correct path to your logo
+      date: "January 2020 – Present",
+      desc: "Leading the programming team in developing 'The Occultist', a next-gen video game for PC, PS5, and Xbox Series X/S.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Developed core systems and base architecture using C++ and Blueprints",
+        "Implemented complex gameplay systems and mechanics",
+        "Set up character locomotion and animation systems",
+        "Created tools and editor scripts to streamline workflows for artists and designers",
+        "Integrated GAS (Gameplay Ability System) and Common UI into the project",
+        "Collaborated closely with cross-functional teams to deliver high-quality game features"
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Game Programmer",
+      company: "Freelance / Personal Projects",
+      companylogo: require("./assets/images/freelanceLogo.png"), // Replace with the correct path to your logo
+      date: "2018 – Present",
+      desc: "Developed several indie games and participated in game jams.",
+      descBullets: [
+        "Won Epic MegaJam with 'The Yellow Robot' as the sole programmer",
+        "Developed 'Kibus', which placed first on Itch.io for several days",
+        "Created 'Nodine' and other personal projects, handling all programming aspects"
+      ]
     }
   ]
 };
 
-/* Your Open Source Section to View Your Github Pinned Projects
-To know how to get github key look at readme.md */
+/* Your Open Source Section to View Your Github Pinned Projects */
 
 const openSource = {
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
@@ -212,29 +196,53 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Projects",
+  subtitle: "Some of the major projects I have worked on",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/theOccultistLogo.png"), // Replace with the correct path to your image
+      projectName: "The Occultist",
+      projectDesc:
+        "A next-gen video game for PC, PS5, and Xbox Series X/S developed at Daloar Studios.",
       footerLink: [
         {
           name: "Visit Website",
-          url: "http://saayahealth.com/"
+          url: "https://daloarstudios.com/theoccultist" // Replace with the actual URL
         }
-        //  you can add extra buttons here.
+        // You can add extra buttons here.
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      image: require("./assets/images/theYellowRobotLogo.png"), // Replace with the correct path to your image
+      projectName: "The Yellow Robot",
+      projectDesc:
+        "Winner of Epic MegaJam. Developed as sole programmer alongside artists and animators.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://nextu.se/"
+          name: "View on Itch.io",
+          url: "https://your-itch-io-link.com" // Replace with the actual URL
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/kibusLogo.png"), // Replace with the correct path to your image
+      projectName: "Kibus",
+      projectDesc: "Indie game that placed first on Itch.io for several days.",
+      footerLink: [
+        {
+          name: "View on Itch.io",
+          url: "https://your-itch-io-link.com" // Replace with the actual URL
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/nodineLogo.png"), // Replace with the correct path to your image
+      projectName: "Nodine",
+      projectDesc: "Personal project developed entirely by me.",
+      footerLink: [
+        {
+          name: "View on Itch.io",
+          url: "https://your-itch-io-link.com" // Replace with the actual URL
         }
       ]
     }
@@ -243,62 +251,42 @@ const bigProjects = {
 };
 
 // Achievement Section
-// Include certificates, talks etc
 
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
-  subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+  title: emoji("Achievements 🏆"),
+  subtitle: "Some of the achievements and recognitions I have received",
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
+      title: "Epic MegaJam Winner",
       subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+        "Won the Epic MegaJam with 'The Yellow Robot' as the sole programmer alongside artists and animators.",
+      image: require("./assets/images/epicGamesLogo.png"), // Replace with the correct path to your image
+      imageAlt: "Epic MegaJam Logo",
       footerLink: [
         {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
+          name: "View Project",
+          url: "https://your-project-link.com" // Replace with the actual URL
         },
         {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
+          name: "Epic MegaJam Announcement",
+          url: "https://your-announcement-link.com" // Replace with the actual URL
         }
       ]
     },
     {
-      title: "Google Assistant Action",
-      subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
+      title: "'Kibus' - Top Game on Itch.io",
+      subtitle: "'Kibus' placed first on Itch.io for several days.",
+      image: require("./assets/images/itchIoLogo.png"), // Replace with the correct path to your image
+      imageAlt: "Itch.io Logo",
       footerLink: [
         {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
-      ]
-    },
-
-    {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
-      footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
+          name: "Play Kibus",
+          url: "https://your-itch-io-link.com" // Replace with the actual URL
         }
       ]
     }
+    // You can add more achievements here
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -308,82 +296,57 @@ const achievementSection = {
 const blogSection = {
   title: "Blogs",
   subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
-    },
-    {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
+    "I love to share my knowledge and experiences in game development.",
+  displayMediumBlogs: "false", // Set true to display fetched medium blogs instead of hardcoded ones
+  blogs: [],
+  display: false // Set false to hide this section, defaults to true
 };
 
-// Talks Sections
+// Talks Section
 
 const talkSection = {
-  title: "TALKS",
-  subtitle: emoji(
-    "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
-  ),
-
-  talks: [
-    {
-      title: "Build Actions For Google Assistant",
-      subtitle: "Codelab at GDG DevFest Karachi 2019",
-      slides_url: "https://bit.ly/saadpasta-slides",
-      event_url: "https://www.facebook.com/events/2339906106275053/"
-    }
-  ],
-  display: true // Set false to hide this section, defaults to true
+  title: "Talks",
+  subtitle: "",
+  talks: [],
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
 
 const podcastSection = {
   title: emoji("Podcast 🎙️"),
-  subtitle: "I LOVE TO TALK ABOUT MYSELF AND TECHNOLOGY",
-
-  // Please Provide with Your Podcast embeded Link
+  subtitle: "I love to talk about game development and share my experiences.",
   podcast: [
-    "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
+    "https://your-podcast-link.com/embed" // Replace with your podcast embedded link
   ],
   display: true // Set false to hide this section, defaults to true
 };
 
 // Resume Section
+
 const resumeSection = {
   title: "Resume",
   subtitle: "Feel free to download my resume",
-
-  // Please Provide with Your Podcast embeded Link
   display: true // Set false to hide this section, defaults to true
 };
 
+// Contact Info
+
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
-  subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  subtitle: "Discuss a project or just want to say hi? My inbox is open for all.",
+  number: "", // You can add your phone number here
+  email_address: "davidlespada@gmail.com"
 };
 
 // Twitter Section
 
 const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  userName: "", // Replace "twitter" with your Twitter username without @
+  display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = false; // Set false if you are not looking for a job
 
 export {
   illustration,
