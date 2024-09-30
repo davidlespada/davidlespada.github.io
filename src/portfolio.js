@@ -26,7 +26,7 @@ const greeting = {
     "👨‍💻 Unreal Engine & C++ Programmer | Expert in complex systems & gameplay mechanics 🎮 | Let's create something amazing! 🚀"
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "https://drive.google.com/file/d/1dm6VWgxruFOo0MUUhNNVlkPG9DH_HuPD/view?usp=drive_link", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -34,7 +34,7 @@ const greeting = {
 
 const socialMediaLinks = {
   github: "https://github.com/davidlespada",
-  linkedin: "https://www.linkedin.com/in/david-l%C3%B3pez-89177a214/",
+  linkedin: "https://www.linkedin.com/in/david-l%C3%B3pez-espada-89177a214",
   gmail: "davidlespada@gmail.com",
   // You can add more social media links here
   display: true // Set true to display this section, defaults to false
@@ -60,7 +60,7 @@ const skillsSection = {
       "⚡ Develop tools and editor scripting to streamline workflows for artists and designers"
     ),
     emoji(
-      "⚡ Strong collaboration with cross-functional teams to deliver high-quality game features"
+      "⚡ Lead programmer skilled in team leadership and developing pipelines between department"
     ),
     emoji(
       "⚡ Experience in creating games from scratch and participating in game jams"
@@ -84,10 +84,6 @@ const skillsSection = {
       fontAwesomeClassname: "fas fa-project-diagram"
     },
     {
-      skillName: "Animation Programming",
-      fontAwesomeClassname: "fas fa-running"
-    },
-    {
       skillName: "GAS (Gameplay Ability System)",
       fontAwesomeClassname: "fas fa-cogs"
     },
@@ -95,17 +91,25 @@ const skillsSection = {
       skillName: "Common UI",
       fontAwesomeClassname: "fas fa-tv"
     },
+	{
+      skillName: "Animation Programming",
+      fontAwesomeClassname: "fas fa-running"
+    },
     {
       skillName: "Tools & Scripting",
       fontAwesomeClassname: "fas fa-tools"
     },
     {
-      skillName: "Team Collaboration",
-      fontAwesomeClassname: "fas fa-users"
+      skillName: "Team Leadership",
+      fontAwesomeClassname: "fas fa-chalkboard-teacher"
     },
     {
       skillName: "Git",
       fontAwesomeClassname: "fab fa-git-alt"
+    },
+	    {
+      skillName: "Perforce",
+      fontAwesomeClassname: "fas fa-code-branch"
     }
   ],
   display: true // Set false to hide this section, defaults to true
@@ -123,8 +127,8 @@ const educationInfo = {
       duration: "2019",
       desc: "Studied game development focusing on programming, animation, and 3D art.",
       descBullets: [
-        "Developed final project as main programmer, implementing base systems, player programming, pushable items, and UIs",
-        "Learned how different areas of game development assemble together"
+        "Developed final project 'CIEV' as main programmer, implementing base systems, player programming, pushable items, and UIs",
+        "Learned how different areas of game development assemble together",
       ]
     }
   ]
@@ -133,7 +137,7 @@ const educationInfo = {
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
-  viewSkillBars: true, //Set it to true to show Proficiency Section
+  viewSkillBars: false, //Set it to true to show Proficiency Section
   experience: [
     {
       Stack: "Gameplay Programming",
@@ -160,7 +164,7 @@ const workExperiences = {
       role: "Lead Unreal Engine Programmer",
       company: "Daloar Studios",
       companylogo: require("./assets/images/daloarStudiosLogo.png"), // Replace with the correct path to your logo
-      date: "January 2020 – Present",
+      date: "August 2021 – Present",
       desc: "Leading the programming team in developing 'The Occultist', a next-gen video game for PC, PS5, and Xbox Series X/S.",
       descBullets: [
         "Developed core systems and base architecture using C++ and Blueprints",
@@ -169,6 +173,20 @@ const workExperiences = {
         "Created tools and editor scripts to streamline workflows for artists and designers",
         "Integrated GAS (Gameplay Ability System) and Common UI into the project",
         "Collaborated closely with cross-functional teams to deliver high-quality game features"
+      ]
+    },
+    {
+      role: "Unreal game programmer",
+      company: "FrameOver",
+      companylogo: require("./assets/images/frameoverLogo.png"), // Replace with the correct path to your logo
+      date: "October 2020 – May 2021",
+      desc: "Developed a prototype for a few months and developed a VR standalone experience for Quest 2",
+      descBullets: [
+        "Installed SDKs and responsible for app builds and compatibility",
+        "VR interaction system",
+        "UI navigation",
+        "Organize projects with art departments",
+        "Android profiling for optimal FPS"
       ]
     },
     {
@@ -197,7 +215,7 @@ const openSource = {
 
 const bigProjects = {
   title: "Projects",
-  subtitle: "Some of the major projects I have worked on",
+  subtitle: "Projects I have worked on",
   projects: [
     {
       image: require("./assets/images/theOccultistLogo.png"), // Replace with the correct path to your image
@@ -207,7 +225,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "Visit Website",
-          url: "https://daloarstudios.com/theoccultist" // Replace with the actual URL
+          url: "https://theoccultist.com/" // Replace with the actual URL
         }
         // You can add extra buttons here.
       ]
@@ -220,7 +238,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "View on Itch.io",
-          url: "https://your-itch-io-link.com" // Replace with the actual URL
+          url: "https://daboiowich.itch.io/the-yellow-robot" // Replace with the actual URL
         }
       ]
     },
@@ -231,7 +249,7 @@ const bigProjects = {
       footerLink: [
         {
           name: "View on Itch.io",
-          url: "https://your-itch-io-link.com" // Replace with the actual URL
+          url: "https://daboiowich.itch.io/kibus" // Replace with the actual URL
         }
       ]
     },
@@ -266,7 +284,7 @@ const achievementSection = {
       footerLink: [
         {
           name: "View Project",
-          url: "https://your-project-link.com" // Replace with the actual URL
+          url: "https://daboiowich.itch.io/the-yellow-robot" // Replace with the actual URL
         },
         {
           name: "Epic MegaJam Announcement",
@@ -317,7 +335,7 @@ const podcastSection = {
   title: emoji("Podcast 🎙️"),
   subtitle: "I love to talk about game development and share my experiences.",
   podcast: [
-    "https://your-podcast-link.com/embed" // Replace with your podcast embedded link
+    "https://www.ivoox.com/player_ej_131253132_6_1.html" // Replace with your podcast embedded link
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -327,14 +345,14 @@ const podcastSection = {
 const resumeSection = {
   title: "Resume",
   subtitle: "Feel free to download my resume",
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Contact Info
 
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
-  subtitle: "Discuss a project or just want to say hi? My inbox is open for all.",
+  subtitle: "Let me know anything! My inbox is open for all.",
   number: "", // You can add your phone number here
   email_address: "davidlespada@gmail.com"
 };
@@ -346,7 +364,7 @@ const twitterDetails = {
   display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = false; // Set false if you are not looking for a job
+const isHireable = true; // Set false if you are not looking for a job
 
 export {
   illustration,
