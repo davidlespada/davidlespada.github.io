@@ -176,7 +176,7 @@ const workExperiences = {
       ]
     },
     {
-      role: "Unreal game programmer",
+      role: "Unreal Game Programmer",
       company: "FrameOver",
       companylogo: require("./assets/images/frameoverLogo.png"), // Replace with the correct path to your logo
       date: "October 2020 – May 2021",
@@ -208,7 +208,7 @@ const workExperiences = {
 
 const openSource = {
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Some big projects you have worked on
@@ -243,6 +243,17 @@ const bigProjects = {
       ]
     },
     {
+      image: require("./assets/images/ciev.png"), // Replace with the correct path to your image
+      projectName: "C.I.E.V",
+      projectDesc: "PrimerFrame final project",
+      footerLink: [
+        {
+          name: "View on Itch.io",
+          url: "https://daboiowich.itch.io/ciev" // Replace with the actual URL
+        }
+      ]
+    },
+    {
       image: require("./assets/images/kibusLogo.png"), // Replace with the correct path to your image
       projectName: "Kibus",
       projectDesc: "Indie game that placed first on Itch.io for several days.",
@@ -256,11 +267,22 @@ const bigProjects = {
     {
       image: require("./assets/images/nodineLogo.png"), // Replace with the correct path to your image
       projectName: "Nodine",
-      projectDesc: "Personal project developed entirely by me.",
+      projectDesc: "Personal project in development entirely by me.",
       footerLink: [
         {
           name: "View on Itch.io",
-          url: "https://your-itch-io-link.com" // Replace with the actual URL
+          url: "https://daboiowich.itch.io/nodine" // Replace with the actual URL
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/syzygyLogo.png"), // Replace with the correct path to your image
+      projectName: "Syzygy",
+      projectDesc: "Neon Endless Runner! Solo-developed for Game Jam",
+      footerLink: [
+        {
+          name: "View on Itch.io",
+          url: "https://daboiowich.itch.io/syzygy" // Replace with the actual URL
         }
       ]
     }
@@ -287,8 +309,8 @@ const achievementSection = {
           url: "https://daboiowich.itch.io/the-yellow-robot" // Replace with the actual URL
         },
         {
-          name: "Epic MegaJam Announcement",
-          url: "https://your-announcement-link.com" // Replace with the actual URL
+          name: "Epic MegaJam YouTube Announcement",
+          url: "https://youtu.be/e8falymc1Nk?t=1738" // Replace with the actual URL
         }
       ]
     },
@@ -300,7 +322,7 @@ const achievementSection = {
       footerLink: [
         {
           name: "Play Kibus",
-          url: "https://your-itch-io-link.com" // Replace with the actual URL
+          url: "https://daboiowich.itch.io/kibus" // Replace with the actual URL
         }
       ]
     }
