@@ -1,0 +1,523 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAVID ESPADA // UE5 UNREAL C++ PROGRAMMER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="hud">
+  <div class="hud-l">FPS: <span id="fps">--</span> &nbsp; FRAME: <span id="fms">0.00ms</span></div>
+  <div class="hud-c">UNREAL ENGINE 5 &nbsp;·&nbsp; UNREAL C++ PROGRAMMER &nbsp;·&nbsp; SPAIN</div>
+  <div class="hud-r">VRAM: 8.1GB &nbsp; DRAW CALLS: 312<br><span id="clk">--:--:--</span></div>
+</div>
+
+<div id="xhair"></div>
+
+<nav>
+  <a class="nav-dot active" href="#hero"     title="HERO"></a>
+  <a class="nav-dot"        href="#about"    title="ABOUT"></a>
+  <a class="nav-dot"        href="#projects" title="PROJECTS"></a>
+  <a class="nav-dot"        href="#skills"   title="SKILLS"></a>
+  <a class="nav-dot"        href="#log"      title="TIMELINE"></a>
+  <a class="nav-dot"        href="#contact"  title="CONTACT"></a>
+</nav>
+
+<!-- LIGHTBOX -->
+<div id="lb">
+  <div class="lb-main">
+    <button class="lb-close" id="lb-close">[ CLOSE &times; ]</button>
+    <img id="lb-img" src="" alt="">
+  </div>
+  <div class="lb-nav">
+    <button class="lb-btn" id="lb-prev">&#9664; PREV</button>
+    <span class="lb-counter" id="lb-count">1 / 1</span>
+    <button class="lb-btn" id="lb-next">NEXT &#9654;</button>
+  </div>
+  <div class="lb-thumbs" id="lb-thumbs"></div>
+</div>
+
+<!-- ─── HERO ─── -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="pre-label">// INSTANCE_INITIALIZED</div>
+    <h1 class="name">DAVID<br><span class="accent">ESPADA</span></h1>
+    <p class="headline">Multiplayer AAA experience · Led &amp; shipped a AA game on PC, PS5 &amp; and Xbox</p>
+    <p class="title-line">Unreal Engine 5 &nbsp;·&nbsp; Unreal C++ Programmer</p>
+    <p class="location-line">Spain &nbsp;·&nbsp; Open to Relocation &amp; Remote</p>
+    <div class="stat-grid">
+      <div class="stat-cell"><div class="stat-val">5+</div><div class="stat-label">Years Exp.</div></div>
+      <div class="stat-cell"><div class="stat-val">AAA</div><div class="stat-label">Current Project</div></div>
+      <div class="stat-cell stat-cell--jam"><div class="stat-val">🏆</div><div class="stat-label">Epic MegaJam<br>Winner</div></div>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#projects">VIEW WORK</a>
+      <a class="btn btn-ghost"   href="#contact">GET IN TOUCH</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="code-panel">
+      <div class="code-panel-bar"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+      <div class="code-body">
+        <div class="code-line"><span class="ln">1</span><span class="cmt">// DavidEspada.cpp — Unreal C++ Programmer</span></div>
+        <div class="code-line"><span class="ln">2</span>&nbsp;</div>
+        <div class="code-line"><span class="ln">3</span><span class="kw">#include</span> <span class="str">"DavidEspada.h"</span></div>
+        <div class="code-line"><span class="ln">4</span><span class="kw">#include</span> <span class="str">"AbilitySystemComponent.h"</span></div>
+        <div class="code-line"><span class="ln">5</span><span class="kw">#include</span> <span class="str">"CommonUI/CommonUITypes.h"</span></div>
+        <div class="code-line"><span class="ln">6</span><span class="kw">#include</span> <span class="str">"Net/UnrealNetwork.h"</span></div>
+        <div class="code-line"><span class="ln">7</span>&nbsp;</div>
+        <div class="code-line"><span class="ln">8</span><span class="mac">DEFINE_LOG_CATEGORY</span>(<span class="cls">LogDavidEspada</span>);</div>
+        <div class="code-line"><span class="ln">9</span>&nbsp;</div>
+        <div class="code-line"><span class="ln">10</span><span class="cls">ADavidEspada</span>::<span class="fn">ADavidEspada</span>()</div>
+        <div class="code-line"><span class="ln">11</span>{</div>
+        <div class="code-line"><span class="ln">12</span>&nbsp;&nbsp;Role     = <span class="str">"Lead / Gameplay Programmer"</span>;</div>
+        <div class="code-line"><span class="ln">13</span>&nbsp;&nbsp;Engine   = <span class="str">"Unreal Engine 5"</span>;</div>
+        <div class="code-line"><span class="ln">14</span>&nbsp;&nbsp;Location = <span class="str">"Spain"</span>;</div>
+        <div class="code-line"><span class="ln">15</span>&nbsp;&nbsp;<span class="cmt">// GAS · 3Cs · Multiplayer · Console · Anim</span></div>
+        <div class="code-line"><span class="ln">16</span>&nbsp;&nbsp;bCanLead   = <span class="kw">true</span>;</div>
+        <div class="code-line"><span class="ln">17</span>&nbsp;&nbsp;bAvailable = <span class="kw">true</span>;</div>
+        <div class="code-line"><span class="ln">18</span>}</div>
+        <div class="code-line"><span class="ln">19</span>&nbsp;</div>
+        <div class="code-line"><span class="ln">20</span><span class="kw">void </span><span class="cls">ADavidEspada</span>::<span class="fn">BeginPlay</span>() { <span class="mac">Super</span>::<span class="fn">BeginPlay</span>(); <span class="cursor-blink"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+  <div class="section-label">01 &nbsp; About</div>
+  <h2 class="section-title">WHO I AM</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a <strong>Unreal C++ Gameplay Programmer</strong> specialising in <em>Unreal Engine 5</em>, currently building an unannounced Triple-A multiplayer title at <strong>GRIP Studios</strong>. I've shipped real games on real hardware — PC, PS5, and Xbox Series X/S — and I know that solid architecture isn't a bonus; it's what keeps a codebase alive across years of production.</p>
+      <p>As <strong>Lead Programmer</strong> at Daloar Studios, I owned the full Unreal C++ architecture of <em>The Occultist</em> — a AA first-person narrative horror published by <strong>Daedalic Entertainment</strong> and showcased at <em>Gamescom 2024</em>. I architected and implemented <strong>GAS</strong> for the full game, owned all <strong>3Cs</strong> (Character, Camera, Controls), integrated CommonUI, shipped technical animation &amp; locomotion systems, and ported the game to PS5 and Xbox Series devkits. Not just lead — also a hands-on programmer across the full stack. The game launched <strong>April 8, 2026</strong> on PC, PS5, and Xbox Series X/S.</p>
+      <p>Long before doing this professionally, I was doing it anyway. I've shipped indie games solo, won the <strong>Epic MegaJam</strong> as sole programmer, landed <strong>Kibus at #1 on Itch.io</strong>, and built VR experiences for standalone hardware. That foundation means I understand the full stack — not just my own slice of it.</p>
+      <p>I write systems that designers can actually iterate on and that the next programmer won't curse. If your team needs someone who can go from <em>whiteboard architecture</em> to <em>shippable Unreal C++</em> — and lead others while doing it — <em>let's talk.</em></p>
+
+      <div class="about-personal">
+        <h3 class="personal-title">// Why I Make Games</h3>
+        <p>I don't just build games — I <strong>live</strong> them. <em>Outer Wilds</em> recently re-taught me how powerful this medium truly is: how a game can change you for the better and earn a permanent place in your heart. Growing up with <em>Final Fantasy</em>, I fell in love with worlds that felt alive — characters you wanted to stay with, places you never wanted to leave.</p>
+        <p>But as I grew older I discovered the other side of the spectrum — the deeply psychological, the unsettling, the meaningful. Games like <em>Silent Hill</em> became some of my all-time favourites, proving that interactive experiences can reach places no other art form can. That duality — wonder <strong>and</strong> darkness — is what drives me to create.</p>
+      </div>
+    </div>
+    <div class="about-aside">
+      <div class="aside-block" data-label="// CURRENTLY">
+        <ul class="aside-list">
+          <li>Gameplay Programmer @ <strong>GRIP Studios</strong></li>
+          <li>Unannounced <em>Triple-A Multiplayer</em> title</li>
+          <li>Open to senior / lead <em>Unreal C++</em> roles</li>
+        </ul>
+      </div>
+      <div class="aside-block" data-label="// SPECIALISMS">
+        <ul class="aside-list">
+          <li><strong>GAS</strong> Architecture &amp; Implementation</li>
+          <li><strong>3Cs</strong> — Character, Camera, Controls</li>
+          <li><em>Multiplayer</em> &amp; Replication (UE5)</li>
+          <li>CommonUI Integration</li>
+          <li>Technical Animation &amp; <em>Locomotion</em></li>
+          <li>Console Porting — <strong>PS5 / Xbox Series X/S</strong></li>
+          <li>VR — Oculus Quest 2</li>
+          <li><em>Team Leadership</em> &amp; Mentoring</li>
+          <li>Editor Tooling &amp; Pipeline Automation</li>
+        </ul>
+      </div>
+      <div class="aside-block" data-label="// ELSEWHERE">
+        <ul class="aside-list">
+          <li><em>Epic MegaJam Winner</em> — The Yellow Robot</li>
+          <li><strong>Itch.io #1</strong> — Kibus</li>
+          <li>Podcast host — game dev &amp; tech</li>
+          <li><a href="https://daboiowich.itch.io" target="_blank">daboiowich.itch.io</a></li>
+        </ul>
+      </div>
+      <div class="aside-block" data-label="// LANGUAGES">
+        <ul class="aside-list">
+          <li>Spanish — Native</li>
+          <li>English — Professional</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROJECTS ─── -->
+<section id="projects">
+  <div class="section-label">02 &nbsp; Projects</div>
+  <h2 class="section-title">ONGOING &amp; SHIPPED<br>WORK</h2>
+  <div class="project-grid">
+
+    <!-- GRIP -->
+    <div class="project-card" id="card-grip">
+      <div class="project-tag">// TRIPLE-A &nbsp;·&nbsp; MULTIPLAYER &nbsp;·&nbsp; UE5 &nbsp;·&nbsp; GRIP STUDIOS</div>
+      <div class="project-name">[REDACTED]</div>
+      <span class="tier-badge tier-aaa">AAA</span>
+      <span class="status-badge status-ongoing">⚙ ONGOING</span>
+      <div class="platform-strip">🖥 PC &nbsp;·&nbsp; 🎮 PS5 &nbsp;·&nbsp; 🎮 Xbox Series X|S</div>
+      <div class="project-desc">Currently in full production on an unannounced <strong>Triple-A multiplayer title</strong> at GRIP Studios. Responsible for <strong>Unreal C++ core gameplay systems</strong>, multiplayer replication architecture, and cross-team feature ownership. Details under NDA — reveal incoming.</div>
+      <div class="chips">
+        <span class="chip hl">UE5</span><span class="chip hl">Unreal C++</span>
+        <span class="chip">Multiplayer</span><span class="chip">Replication</span><span class="chip">Triple-A</span><span class="chip">NDA 🔒</span>
+      </div>
+      <div class="card-links"><div class="card-links-title">// Links</div>
+        <a class="card-link card-link--site" href="https://grip-studios.com/" target="_blank">🌐 GRIP STUDIOS</a>
+      </div>
+      <div class="project-num">01</div>
+    </div>
+
+    <!-- THE OCCULTIST -->
+    <div class="project-card" id="card-occultist">
+      <div class="project-tag">// AA &nbsp;·&nbsp; SURVIVAL HORROR &nbsp;·&nbsp; UE5 &nbsp;·&nbsp; PC · PS5 · XSX</div>
+      <div class="project-name">The Occultist</div>
+      <span class="tier-badge tier-aa">AA</span>
+      <span class="status-badge status-shipping">🚀 SHIPPING APRIL 8, 2026</span>
+      <div class="platform-strip">🖥 PC &nbsp;·&nbsp; 🎮 PS5 &nbsp;·&nbsp; 🎮 Xbox Series X|S</div>
+      <div class="project-award">Devcom 2023 Blockbuster Award &nbsp;·&nbsp; Several Industry Awards</div>
+      <div class="project-desc">Led the programming team on a next-gen AA first-person narrative horror — published by <strong>Daedalic Entertainment</strong>, showcased at Gamescom 2024, voiced by <strong>Doug Cockle</strong> (Geralt of Rivia). Full Unreal C++ architecture: <strong>GAS implementation</strong>, all <strong>3Cs</strong>, CommonUI, technical animation &amp; locomotion, console devkit porting, and hands-on programming across the full stack. Hired and mentored junior developers.</div>
+      <div class="chips">
+        <span class="chip hl">GAS Architecture</span><span class="chip hl">3Cs</span><span class="chip hl">CommonUI</span>
+        <span class="chip">PS5 Devkit</span><span class="chip">Xbox Series X/S</span>
+        <span class="chip">Tech Animation</span><span class="chip">Team Lead</span><span class="chip">AA</span>
+      </div>
+      <div class="card-links"><div class="card-links-title">// Links</div>
+        <button class="card-link card-link--screens" onclick="openLb('occultist')">📷 SCREENSHOTS</button>
+        <a class="card-link card-link--site" href="https://theoccultist.com/" target="_blank">🌐 WEBSITE</a>
+        <a class="card-link card-link--site" href="https://store.steampowered.com/app/2092840/The_Occultist/" target="_blank">🎮 STEAM</a>
+        <a class="card-link card-link--site" href="https://www.youtube.com/watch?v=cvD76zgljNY" target="_blank">▶ TRAILER</a>
+      </div>
+      <div class="project-num">02</div>
+    </div>
+
+    <!-- C.I.E.V -->
+    <div class="project-card" id="card-ciev">
+      <div class="project-tag">// INDIE &nbsp;·&nbsp; ADVENTURE &nbsp;·&nbsp; DIPLOMA PROJECT &nbsp;·&nbsp; SOLE PROGRAMMER &nbsp;·&nbsp; 2020</div>
+      <div class="project-name">C.I.E.V</div>
+      <span class="tier-badge tier-indie">INDIE</span>
+      <span class="status-badge status-shipped">✔ SHIPPED</span>
+      <div class="project-desc">PrimerFrame diploma final project — built as <strong>sole programmer</strong>. Implemented base systems, player programming, pushable mechanics, and all UI. A complete game shipped from scratch while still studying.</div>
+      <div class="chips">
+        <span class="chip hl">Sole Programmer</span><span class="chip">Player Systems</span>
+        <span class="chip">Unreal Engine</span><span class="chip">Diploma Project</span>
+      </div>
+      <div class="card-links"><div class="card-links-title">// Links</div>
+        <button class="card-link card-link--screens" onclick="openLb('ciev')">📷 SCREENSHOTS</button>
+        <a class="card-link card-link--site" href="https://daboiowich.itch.io/ciev" target="_blank">🎮 ITCH.IO</a>
+        <a class="card-link card-link--site" href="https://www.youtube.com/watch?v=HVV_qFpY3pY" target="_blank">▶ VIDEO</a>
+      </div>
+      <div class="project-num">03</div>
+    </div>
+
+    <!-- YELLOW ROBOT -->
+    <div class="project-card" id="card-yr">
+      <div class="project-tag">// INDIE &nbsp;·&nbsp; GAME JAM &nbsp;·&nbsp; EPIC MEGAJAM &nbsp;·&nbsp; WINNER &nbsp;·&nbsp; 2023</div>
+      <div class="project-name">The Yellow Robot</div>
+      <span class="tier-badge tier-indie">INDIE</span>
+      <span class="status-badge status-shipped">✔ SHIPPED</span>
+      <div class="project-award">🏆 Epic MegaJam Winner 2023</div>
+      <div class="project-desc">Won the <strong>Epic MegaJam</strong> as the team's sole programmer — only coder alongside artists and animators. Handled all gameplay systems and delivery under jam constraints. Featured in the official <strong>Epic Games YouTube announcement</strong>.</div>
+      <div class="chips">
+        <span class="chip hl">Epic MegaJam Winner</span><span class="chip">Sole Programmer</span><span class="chip">Unreal Engine</span>
+      </div>
+      <div class="card-links"><div class="card-links-title">// Links</div>
+        <button class="card-link card-link--screens" onclick="openLb('yellow_robot')">📷 SCREENSHOTS</button>
+        <a class="card-link card-link--site" href="https://daboiowich.itch.io/the-yellow-robot" target="_blank">🎮 ITCH.IO</a>
+        <a class="card-link card-link--site" href="https://www.youtube.com/watch?v=AY8jnajbIC4" target="_blank">▶ VIDEO</a>
+      </div>
+      <div class="project-num">04</div>
+    </div>
+
+    <!-- KIBUS -->
+    <div class="project-card" id="card-kibus">
+      <div class="project-tag">// INDIE &nbsp;·&nbsp; ITCH.IO #1 &nbsp;·&nbsp; SOLO DEV &nbsp;·&nbsp; 2019</div>
+      <div class="project-name">Kibus</div>
+      <span class="tier-badge tier-indie">INDIE</span>
+      <span class="status-badge status-shipped">✔ SHIPPED</span>
+      <div class="project-award">🥇 Itch.io #1</div>
+      <div class="project-desc">Solo indie game that hit <strong>#1 on Itch.io</strong> and held the spot for several days. Gameplay, systems, and shipping — all solo. Proof that the work can find an audience entirely on its own.</div>
+      <div class="chips">
+        <span class="chip hl">Itch.io #1</span><span class="chip">Solo Dev</span><span class="chip">Game Jam</span>
+      </div>
+      <div class="card-links"><div class="card-links-title">// Links</div>
+        <button class="card-link card-link--screens" onclick="openLb('kibus')">📷 SCREENSHOTS</button>
+        <a class="card-link card-link--site" href="https://daboiowich.itch.io/kibus" target="_blank">🎮 ITCH.IO</a>
+      </div>
+      <div class="project-num">05</div>
+    </div>
+
+    <!-- NODINE -->
+    <div class="project-card" id="card-nodine">
+      <div class="project-tag">// INDIE &nbsp;·&nbsp; PERSONAL PROJECT &nbsp;·&nbsp; ONGOING</div>
+      <div class="project-name">Nodine</div>
+      <span class="tier-badge tier-indie">INDIE</span>
+      <span class="status-badge status-ongoing">⚙ ONGOING</span>
+      <div class="project-desc">Ongoing solo passion project with published devlogs on Itch.io. Proof that the drive to ship doesn't clock out after hours. The project continues to evolve.</div>
+      <div class="chips">
+        <span class="chip">Solo Dev</span>
+      </div>
+      <div class="card-links"><div class="card-links-title">// Links</div>
+        <button class="card-link card-link--screens" onclick="openLb('nodine')">📷 SCREENSHOTS</button>
+        <a class="card-link card-link--site" href="https://daboiowich.itch.io/nodine" target="_blank">🎮 ITCH.IO</a>
+      </div>
+      <div class="project-num">06</div>
+    </div>
+
+    <!-- SYZYGY -->
+    <div class="project-card" id="card-syzygy">
+      <div class="project-tag">// INDIE &nbsp;·&nbsp; GAME JAM &nbsp;·&nbsp; NEON RUNNER</div>
+      <div class="project-name">Syzygy</div>
+      <span class="tier-badge tier-indie">INDIE</span>
+      <span class="status-badge status-shipped">✔ SHIPPED</span>
+      <div class="project-desc">Neon wireframe endless runner built for a game jam. All gameplay and systems handled independently — proof that the drive to ship doesn't clock out after hours.</div>
+      <div class="chips">
+        <span class="chip">Solo Dev</span><span class="chip">Neon Runner</span>
+        <span class="chip">Game Jam</span>
+      </div>
+      <div class="card-links"><div class="card-links-title">// Links</div>
+        <button class="card-link card-link--screens" onclick="openLb('syzygy')">📷 SCREENSHOTS</button>
+        <a class="card-link card-link--site" href="https://daboiowich.itch.io/syzygy" target="_blank">🎮 ITCH.IO</a>
+      </div>
+      <div class="project-num">07</div>
+    </div>
+
+    <!-- VR -->
+    <div class="project-card">
+      <div class="project-tag">// INDIE &nbsp;·&nbsp; VR &nbsp;·&nbsp; STANDALONE &nbsp;·&nbsp; QUEST 2 &nbsp;·&nbsp; FRAMEOVER &nbsp;·&nbsp; 2020</div>
+      <div class="project-name">VR Standalone Experience</div>
+      <span class="tier-badge tier-indie">INDIE</span>
+      <span class="status-badge status-shipped">✔ SHIPPED</span>
+      <div class="project-desc">Programmed a VR experience and interactive prototype for <strong>Oculus Quest 2</strong> at FrameOver. Built the full VR interaction system from scratch, UI navigation, SDK integration, app builds, and <strong>Android profiling</strong> to hit stable FPS targets on-device.</div>
+      <div class="chips">
+        <span class="chip hl">VR</span><span class="chip">Quest 2</span>
+        <span class="chip">Android Profiling</span><span class="chip">UE4</span><span class="chip">SDK Integration</span>
+      </div>
+      <div class="project-num">08</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── SKILLS ─── -->
+<section id="skills">
+  <div class="section-label">03 &nbsp; Skills</div>
+  <h2 class="section-title">TECHNICAL<br>STACK</h2>
+  <div class="skills-layout">
+    <div>
+      <div class="skill-group-title">// Core Proficiencies</div>
+      <div class="skill-row"><span class="skill-name">Unreal Engine 5</span><div class="skill-bar-track"><div class="skill-bar-fill" data-w="95"></div></div><span class="skill-pct">95</span></div>
+      <div class="skill-row"><span class="skill-name">Unreal C++</span><div class="skill-bar-track"><div class="skill-bar-fill" data-w="93"></div></div><span class="skill-pct">93</span></div>
+      <div class="skill-row"><span class="skill-name">GAS Architecture</span><div class="skill-bar-track"><div class="skill-bar-fill" data-w="91"></div></div><span class="skill-pct">91</span></div>
+      <div class="skill-row"><span class="skill-name">3Cs Design</span><div class="skill-bar-track"><div class="skill-bar-fill" data-w="90"></div></div><span class="skill-pct">90</span></div>
+      <div class="skill-row"><span class="skill-name">Multiplayer / Replication</span><div class="skill-bar-track"><div class="skill-bar-fill" data-w="87"></div></div><span class="skill-pct">87</span></div>
+      <div class="skill-row"><span class="skill-name">Technical Animation</span><div class="skill-bar-track"><div class="skill-bar-fill" data-w="85"></div></div><span class="skill-pct">85</span></div>
+      <div class="skill-row"><span class="skill-name">Team Leadership</span><div class="skill-bar-track"><div class="skill-bar-fill" data-w="88"></div></div><span class="skill-pct">88</span></div>
+      <div class="skill-row"><span class="skill-name">AI (BT / EQS)</span><div class="skill-bar-track"><div class="skill-bar-fill" data-w="82"></div></div><span class="skill-pct">82</span></div>
+      <div class="skill-row"><span class="skill-name">Python (Pipeline)</span><div class="skill-bar-track"><div class="skill-bar-fill" data-w="78"></div></div><span class="skill-pct">78</span></div>
+    </div>
+    <div>
+      <div class="skill-group-title">// Engine &amp; Language</div>
+      <div class="tag-cloud">
+        <span class="tag ue">Unreal Engine 5</span><span class="tag ue">Unreal Engine 4</span>
+        <span class="tag ue">Unreal C++</span><span class="tag">Blueprints</span>
+        <span class="tag">Python (Tooling)</span>
+      </div>
+      <div class="skill-group-title" style="margin-top:24px">// Gameplay Systems</div>
+      <div class="tag-cloud">
+        <span class="tag ue">GAS</span><span class="tag ue">CommonUI</span>
+        <span class="tag">3Cs</span><span class="tag">Slate UI</span>
+        <span class="tag">Behavior Trees</span><span class="tag">EQS</span>
+        <span class="tag">Anim Blueprints</span><span class="tag">Motion Warping</span>
+      </div>
+      <div class="skill-group-title" style="margin-top:24px">// Multiplayer &amp; Platforms</div>
+      <div class="tag-cloud">
+        <span class="tag ue">Multiplayer</span><span class="tag">Dedicated Server</span><span class="tag">Replication Graph</span>
+        <span class="tag">PS5 Devkit</span><span class="tag">Xbox Series X/S</span>
+        <span class="tag">VR / Quest 2</span>
+      </div>
+      <div class="skill-group-title" style="margin-top:24px">// Tools &amp; Pipeline</div>
+      <div class="tag-cloud">
+        <span class="tag">Unreal Insights</span><span class="tag">Editor Scripting</span>
+        <span class="tag">Rider / VS 2022</span><span class="tag">Perforce</span><span class="tag">Git</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TIMELINE ─── -->
+<section id="log">
+  <div class="section-label">04 &nbsp; Timeline</div>
+  <h2 class="section-title">CHANGE<br>LOG</h2>
+  <div class="log-wrap">
+    <div class="log-sidebar">
+      <div class="log-year active" data-year="2025">2025</div>
+      <div class="log-year" data-year="2022">2022</div>
+      <div class="log-year" data-year="2021">2021</div>
+      <div class="log-year" data-year="2020">2020</div>
+      <div class="log-year" data-year="2019">2019</div>
+      <div class="log-year" data-year="2018">2018</div>
+    </div>
+    <div class="log-entries">
+
+      <div class="log-entry active" data-year="2025">
+        <div class="entry-row">
+          <div class="entry-date">2025 →</div>
+          <div>
+            <div class="entry-title">Gameplay Programmer — GRIP Studios</div>
+            <div class="entry-body">Joined GRIP Studios to work on an unannounced <strong>Triple-A multiplayer title</strong>. Writing <em>Unreal C++ core systems</em>, multiplayer replication architecture, and gameplay features alongside a seasoned team. Production in full swing — can't say more, yet.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="log-entry" data-year="2022">
+        <div class="entry-row">
+          <div class="entry-date">2022–2025</div>
+          <div>
+            <div class="entry-title">Lead Programmer — Pentakill / Daloar Studios · The Occultist</div>
+            <div class="entry-body">Ascended to <em>Lead Programmer</em> on <strong>The Occultist</strong> — a <strong>AA UE5 narrative horror</strong> for PC, PS5, and Xbox Series X/S, published by <strong>Daedalic Entertainment</strong>. Full Unreal C++ ownership: <strong>GAS</strong>, <strong>3Cs</strong>, CommonUI, technical animation, console devkit porting, and deep hands-on gameplay work across the full stack. Mentored junior devs and ran technical interviews. Shipped <strong>April 8, 2026</strong>.</div>
+            <div class="entry-badge">Devcom 2023 Blockbuster Award</div>
+          </div>
+        </div>
+        <div class="entry-row">
+          <div class="entry-date">Aug 2024</div>
+          <div>
+            <div class="entry-title">Gamescom 2024 — The Occultist Showcased in Cologne</div>
+            <div class="entry-body">Wide press coverage. <strong>Doug Cockle</strong> (Geralt of Rivia) confirmed as lead voice actor. Release date announced for April 2026.</div>
+          </div>
+        </div>
+        <div class="entry-row">
+          <div class="entry-date">2023</div>
+          <div>
+            <div class="entry-title">Epic MegaJam Winner — The Yellow Robot</div>
+            <div class="entry-body">Won the <strong>Epic MegaJam 2023</strong> as sole programmer alongside a team of artists and animators. Featured in the official Epic Games YouTube announcement.</div>
+            <div class="entry-badge">Epic MegaJam Winner 2023</div>
+            <a class="entry-link" href="https://daboiowich.itch.io/the-yellow-robot" target="_blank">🎮 itch.io</a>
+          </div>
+        </div>
+        <div class="entry-row">
+          <div class="entry-date">2022–2024</div>
+          <div>
+            <div class="entry-title">Several Industry Awards — The Occultist</div>
+            <div class="entry-body">Multiple nominations and wins at Spanish and international events. Opened the door to the publisher conversation that led to Daedalic Entertainment.</div>
+            <div class="entry-badge">Best Indie Videogame — FreakCon Málaga 2022</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="log-entry" data-year="2021">
+        <div class="entry-row">
+          <div class="entry-date">Aug 2021</div>
+          <div>
+            <div class="entry-title">Unreal Programmer — Pentakill Studios (now Daloar)</div>
+            <div class="entry-body">Joined <strong>Pentakill Studios</strong> (rebranded to Daloar) to build The Occultist from a blank project. No existing codebase — architecture decisions started day one. Progressed to Lead Programmer within the first year.</div>
+          </div>
+        </div>
+        <div class="entry-row">
+          <div class="entry-date">2021</div>
+          <div>
+            <div class="entry-title">Nodine — Solo Indie Demo Released</div>
+            <div class="entry-body">Shipped the first prototype of <strong>Nodine</strong> as a solo side project.</div>
+            <a class="entry-link" href="https://daboiowich.itch.io/nodine" target="_blank">🎮 itch.io</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="log-entry" data-year="2020">
+        <div class="entry-row">
+          <div class="entry-date">2020</div>
+          <div>
+            <div class="entry-title">Diploma in Game Development — PrimerFrame</div>
+            <div class="entry-body">Graduated with a Diploma in Game Development. Final project <strong>C.I.E.V</strong> — built as sole programmer: base systems, player programming, pushable mechanics, and all UI. First time shipping a complete game under real deadline pressure.</div>
+          </div>
+        </div>
+        <div class="entry-row">
+          <div class="entry-date">Oct 2020</div>
+          <div>
+            <div class="entry-title">VR Programmer — FrameOver</div>
+            <div class="entry-body">Programmed a VR experience and prototype for <strong>Oculus Quest 2</strong>. Built the full VR interaction system from scratch, UI navigation, SDK integration, and Android profiling for stable on-device FPS. First paid industry role.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="log-entry" data-year="2019">
+        <div class="entry-row">
+          <div class="entry-date">2019</div>
+          <div>
+            <div class="entry-title">Started Studying — PrimerFrame Game Development Diploma</div>
+            <div class="entry-body">Enrolled in PrimerFrame's game development programme covering programming, animation, and 3D art. The formal foundation of everything that followed.</div>
+          </div>
+        </div>
+        <div class="entry-row">
+          <div class="entry-date">2019</div>
+          <div>
+            <div class="entry-title">Kibus — Game Jam & Itch.io #1</div>
+            <div class="entry-body">Built and shipped <strong>Kibus</strong> for a game jam — reached <em>#1 on Itch.io</em> and held the position for several days. First real signal that the work could find an audience on its own.</div>
+            <div class="entry-badge">Itch.io #1 — Kibus</div>
+            <a class="entry-link" href="https://daboiowich.itch.io/kibus" target="_blank">🎮 itch.io</a>
+          </div>
+        </div>
+        <div class="entry-row">
+          <div class="entry-date">2019</div>
+          <div>
+            <div class="entry-title">Syzygy — Neon Endless Runner, Game Jam</div>
+            <div class="entry-body">Shipped <strong>Syzygy</strong>, a neon wireframe endless runner, as a solo game jam entry. All gameplay and systems handled independently.</div>
+            <a class="entry-link" href="https://daboiowich.itch.io/syzygy" target="_blank">🎮 itch.io</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="log-entry" data-year="2018">
+        <div class="entry-row">
+          <div class="entry-date">2018 →</div>
+          <div>
+            <div class="entry-title">Indie Developer — Game Jams &amp; Personal Projects</div>
+            <div class="entry-body">Started shipping games independently before entering the industry. Competed in game jams, released projects publicly, and operated as a one-person studio — gameplay, systems, and shipping all solo. The full-stack mindset built here shows up every day.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── OUTPUT LOG ─── -->
+<section id="console-section">
+  <div class="section-label">05 &nbsp; Output Log</div>
+  <h2 class="section-title">ENGINE<br>OUTPUT</h2>
+  <div class="console-wrap">
+    <div class="console-bar">
+      <span>OUTPUT LOG — UE5 // DavidEspada.cpp</span>
+      <span class="console-status">ENGINE RUNNING</span>
+    </div>
+    <div id="console-output"></div>
+    <div class="console-input-row">
+      <span class="console-prompt">&gt;</span>
+      <input id="ci" type="text" placeholder="type 'help' for commands…" autocomplete="off" spellcheck="false">
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ─── -->
+<section id="contact">
+  <div class="section-label" style="justify-content:center">06 &nbsp; Contact</div>
+  <h2 class="section-title">OPEN FOR<br>OPPORTUNITIES</h2>
+  <p class="contact-sub contact-sub--bright">
+    Available for senior or lead Unreal C++ roles on ambitious projects.<br>
+    Gameplay systems &nbsp;·&nbsp; Multiplayer &nbsp;·&nbsp; Next-gen platforms.<br>
+    Spain-based &nbsp;·&nbsp; remote-friendly &nbsp;·&nbsp; relocation negotiable.
+  </p>
+  <div class="contact-links">
+    <a class="btn btn-primary" href="https://www.linkedin.com/in/david-l%C3%B3pez-espada-89177a214" target="_blank">LINKEDIN</a>
+    <a class="btn btn-ghost"   href="https://github.com/davidlespada" target="_blank">GITHUB</a>
+    <a class="btn btn-ghost"   href="mailto:davidlespada@gmail.com">EMAIL</a>
+    <a class="btn btn-ghost"   href="/resume.html" target="_blank">RESUME</a>
+  </div>
+</section>
+
+<footer>
+  <span>DAVID ESPADA &nbsp;·&nbsp; UE5 UNREAL C++ PROGRAMMER</span>
+  <span>// Super::BeginPlay() called &nbsp;·&nbsp; <span id="fdate"></span></span>
+</footer>
+
+<script type="module" src="/src/ts/main.ts"></script>
+</body>
+</html>

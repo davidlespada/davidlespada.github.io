@@ -1,0 +1,98 @@
+#lb {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.93);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#lb.open {
+  display: flex;
+}
+
+.lb-main {
+  position: relative;
+  max-width: 900px;
+  width: 90%;
+}
+
+.lb-main img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--bri);
+}
+
+.lb-close {
+  position: absolute;
+  top: -34px;
+  right: 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--dim);
+  cursor: crosshair;
+  letter-spacing: 0.2em;
+  background: none;
+  border: none;
+  padding: 4px 8px;
+}
+
+.lb-close:hover {
+  color: var(--ue);
+}
+
+.lb-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lb-btn {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--dim);
+  border: 1px solid var(--border);
+  padding: 6px 16px;
+  background: none;
+  cursor: crosshair;
+  transition: all 0.15s;
+  letter-spacing: 0.15em;
+}
+
+.lb-btn:hover {
+  border-color: var(--ue);
+  color: var(--ue);
+}
+
+.lb-counter {
+  font-size: 10px;
+  color: var(--dim);
+  letter-spacing: 0.2em;
+}
+
+.lb-thumbs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 900px;
+}
+
+.lb-thumb {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  cursor: crosshair;
+  border: 1px solid var(--border);
+  opacity: 0.55;
+  transition: opacity 0.15s;
+}
+
+.lb-thumb:hover,
+.lb-thumb.active {
+  opacity: 1;
+  border-color: var(--ue);
+}

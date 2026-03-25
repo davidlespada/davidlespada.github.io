@@ -1,0 +1,101 @@
+#hud {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px 18px;
+  background: linear-gradient(180deg, rgba(8, 10, 12, 0.97) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.hud-l {
+  font-size: 11px;
+  color: var(--green);
+}
+
+.hud-l span {
+  color: var(--bright);
+}
+
+.hud-c {
+  font-size: 10px;
+  color: var(--dim);
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.hud-r {
+  font-size: 10px;
+  color: var(--dim);
+  text-align: right;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-dot {
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: var(--dim);
+  transition: all 0.2s;
+  cursor: crosshair;
+  text-decoration: none;
+}
+
+.nav-dot:hover,
+.nav-dot.active {
+  background: var(--ue);
+  transform: scaleX(4);
+  transform-origin: right;
+}
+
+/* CROSSHAIR */
+#xhair {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9997;
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px;
+  opacity: 0;
+}
+
+#xhair::before,
+#xhair::after {
+  content: '';
+  position: absolute;
+  background: var(--ue);
+}
+
+#xhair::before {
+  width: 1px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+}
+
+#xhair::after {
+  width: 100%;
+  height: 1px;
+  top: 50%;
+  left: 0;
+}
+
+@keyframes xFade {
+  0% { opacity: 0.9; transform: scale(0.4); }
+  100% { opacity: 0; transform: scale(2.2); }
+}

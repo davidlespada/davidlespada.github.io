@@ -1,0 +1,40 @@
+@media (max-width: 900px) {
+  #hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-right,
+  nav {
+    display: none;
+  }
+
+  section {
+    padding: 60px 24px;
+  }
+
+  .about-grid,
+  .skills-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .log-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .log-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    overflow-x: auto;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero-left {
+    padding: 100px 24px 60px;
+  }
+}

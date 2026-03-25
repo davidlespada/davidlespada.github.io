@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.local
+.DS_Store
+.idea/
+
+# Build artifacts
+extract-images.js
+galleries-map.json
+covers-map.json

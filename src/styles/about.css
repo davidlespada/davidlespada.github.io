@@ -1,0 +1,109 @@
+#about {
+  background: var(--bg2);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-text p {
+  font-size: 13px;
+  line-height: 1.95;
+  color: var(--text);
+  margin-bottom: 22px;
+}
+
+.about-text p strong {
+  color: var(--bright);
+  font-weight: normal;
+}
+
+.about-text p em {
+  color: var(--ue);
+  font-style: normal;
+}
+
+.about-personal {
+  margin-top: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+
+.personal-title {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--ue);
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+
+.about-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.aside-block {
+  border: 1px solid var(--border);
+  padding: 20px 24px;
+  position: relative;
+}
+
+.aside-block::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -9px;
+  left: 14px;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--ue);
+  background: var(--bg2);
+  padding: 0 6px;
+}
+
+.aside-list {
+  list-style: none;
+}
+
+.aside-list li {
+  font-size: 12px;
+  color: #9ab0c4;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aside-list li:last-child {
+  border-bottom: none;
+}
+
+.aside-list li::before {
+  content: '▸';
+  color: var(--ue);
+  font-size: 9px;
+  flex-shrink: 0;
+}
+
+.aside-list li strong {
+  color: var(--bright);
+  font-weight: 600;
+}
+
+.aside-list li em {
+  color: var(--ue);
+  font-style: normal;
+}
+
+.aside-list li a {
+  color: var(--ue);
+  text-decoration: none;
+}
+
+.aside-list li a:hover {
+  text-decoration: underline;
+}
