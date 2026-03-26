@@ -65,18 +65,13 @@
 .tag {
   font-size: 11px;
   padding: 5px 12px;
-  border: 1px solid var(--border);
-  color: #7a8fa0;
+  border: 1px solid var(--ue-dim);
+  color: var(--ue);
   transition: all 0.15s;
   cursor: default;
 }
 
 .tag:hover {
   border-color: var(--ue);
-  color: var(--ue);
-}
-
-.tag.ue {
-  border-color: var(--ue-dim);
   color: var(--ue);
 }
