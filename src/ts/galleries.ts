@@ -44,4 +44,5 @@ export const COVERS: Record<string, string> = {
   'card-grip': '/images/Grip.webp',
   'card-nodine': '/images/nodine_0.jpg',
   'card-syzygy': '/images/syzygy_0.jpg',
+  'card-vr': '/images/QuestVR.jpg',
 };
