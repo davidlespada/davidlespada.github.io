@@ -1,17 +1,19 @@
 :root {
   --ue: #FF6B00;
   --ue-dim: #c45200;
-  --bg: #080a0c;
-  --bg2: #0d1014;
-  --panel: #0f1318;
+  --bg: #0a0c0f;
+  --bg2: #0f1217;
+  --panel: #12161c;
   --border: #1e2530;
   --bri: #2a3545;
-  --text: #c8d4e0;
-  --dim: #4a5a6a;
-  --bright: #eaf2ff;
+  --text: #c4d0dc;
+  --dim: #6a7a8a;
+  --bright: #eef4fc;
   --green: #4ade80;
-  --red: #f87171;
   --yellow: #fbbf24;
-  --mono: 'Share Tech Mono', monospace;
-  --display: 'Rajdhani', sans-serif;
+  --mono: 'Share Tech Mono', ui-monospace, monospace;
+  --display: 'Rajdhani', system-ui, sans-serif;
+  --wrap: 1080px;
+  --pad-x: 28px;
+  --header-h: 56px;
 }

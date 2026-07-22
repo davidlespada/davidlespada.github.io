@@ -1,40 +1,43 @@
-@media (max-width: 900px) {
-  #hero {
+@media (max-width: 960px) {
+  .hero-row,
+  .featured,
+  .about-layout {
     grid-template-columns: 1fr;
   }
 
-  .hero-right,
-  nav {
+  .project-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .timeline li {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 720px) {
+  .site-nav {
     display: none;
   }
 
-  section {
-    padding: 60px 24px;
-  }
-
-  .about-grid,
-  .skills-layout {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-
-  .log-wrap {
+  .project-grid {
     grid-template-columns: 1fr;
   }
 
-  .log-sidebar {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    overflow-x: auto;
+  .feature .card-cover,
+  .card-cover {
+    height: 150px;
   }
 
-  footer {
-    flex-direction: column;
-    gap: 8px;
+  .contact-bar {
+    align-items: stretch;
   }
 
-  .hero-left {
-    padding: 100px 24px 60px;
+  .contact-links {
+    width: 100%;
+  }
+
+  .contact-links .btn {
+    flex: 1 1 auto;
   }
 }

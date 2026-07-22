@@ -1,77 +1,30 @@
-#skills {
-  background: var(--bg2);
-}
-
-.skills-layout {
+.skill-groups {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  border: 1px solid var(--border);
+  background: var(--panel);
 }
 
-.skill-group-title {
-  font-size: 10px;
-  letter-spacing: 0.3em;
-  color: var(--dim);
-  text-transform: uppercase;
-  margin-bottom: 24px;
-  padding-bottom: 10px;
+.skill-group {
+  padding: 12px 14px;
   border-bottom: 1px solid var(--border);
 }
 
-.skill-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 16px;
+.skill-group:last-child {
+  border-bottom: none;
 }
 
-.skill-name {
-  min-width: 170px;
+.skill-group h3 {
+  font-family: var(--display);
   font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ue);
+  margin-bottom: 4px;
+}
+
+.skill-group p {
+  font-size: 12px;
+  line-height: 1.6;
   color: var(--text);
-}
-
-.skill-bar-track {
-  flex: 1;
-  height: 2px;
-  background: var(--border);
-  position: relative;
-}
-
-.skill-bar-fill {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  background: var(--ue);
-  width: 0;
-  transition: width 1.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.skill-pct {
-  font-size: 11px;
-  color: var(--dim);
-  min-width: 34px;
-  text-align: right;
-}
-
-.tag-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.tag {
-  font-size: 11px;
-  padding: 5px 12px;
-  border: 1px solid var(--ue-dim);
-  color: var(--ue);
-  transition: all 0.15s;
-  cursor: default;
-}
-
-.tag:hover {
-  border-color: var(--ue);
-  color: var(--ue);
 }

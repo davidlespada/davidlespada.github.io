@@ -33,8 +33,8 @@
   font-family: var(--mono);
   font-size: 11px;
   color: var(--dim);
-  cursor: crosshair;
-  letter-spacing: 0.2em;
+  cursor: pointer;
+  letter-spacing: 0.12em;
   background: none;
   border: none;
   padding: 4px 8px;
@@ -57,9 +57,9 @@
   border: 1px solid var(--border);
   padding: 6px 16px;
   background: none;
-  cursor: crosshair;
+  cursor: pointer;
   transition: all 0.15s;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
 }
 
 .lb-btn:hover {
@@ -70,7 +70,7 @@
 .lb-counter {
   font-size: 10px;
   color: var(--dim);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.12em;
 }
 
 .lb-thumbs {
@@ -85,7 +85,7 @@
   width: 60px;
   height: 40px;
   object-fit: cover;
-  cursor: crosshair;
+  cursor: pointer;
   border: 1px solid var(--border);
   opacity: 0.55;
   transition: opacity 0.15s;

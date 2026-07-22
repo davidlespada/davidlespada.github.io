@@ -4,12 +4,384 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>David Espada — Resume</title>
+<meta name="description" content="Resume of David Espada — Unreal Engine C++ programmer. Lead Programmer on The Occultist (PC, PS5, Xbox — Daedalic Entertainment). Senior Gameplay Programmer at GRIP Studios.">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #1a1a2e; }
-  embed { width: 100%; height: 100%; }
+  :root {
+    --ue: #FF6B00;
+    --ue-dim: #c45200;
+    --bg: #0a0c0f;
+    --panel: #12161c;
+    --border: #1e2530;
+    --text: #c4d0dc;
+    --dim: #6a7a8a;
+    --bright: #eef4fc;
+    --yellow: #fbbf24;
+    --mono: 'Share Tech Mono', ui-monospace, monospace;
+    --display: 'Rajdhani', system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- screen chrome ---------- */
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 16px 20px;
+  }
+  .topbar a.back {
+    color: var(--dim);
+    text-decoration: none;
+    font-size: 12px;
+  }
+  .topbar a.back:hover { color: var(--ue); }
+  .topbar .actions { display: flex; gap: 8px; }
+  .btn {
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 7px 14px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .btn:hover { border-color: var(--ue); color: var(--ue); }
+  .btn.primary { background: var(--ue); border-color: var(--ue); color: #0a0c0f; font-weight: bold; }
+  .btn.primary:hover { background: var(--ue-dim); border-color: var(--ue-dim); color: #0a0c0f; }
+
+  /* ---------- sheet ---------- */
+  .sheet {
+    max-width: 900px;
+    margin: 0 auto 48px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 48px 52px;
+  }
+
+  .r-name {
+    font-family: var(--display);
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--bright);
+    line-height: 1.1;
+  }
+  .r-role {
+    color: var(--ue);
+    font-size: 14px;
+    margin-top: 6px;
+  }
+  .r-contact {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--dim);
+  }
+  .r-contact a { color: var(--text); text-decoration: none; }
+  .r-contact a:hover { color: var(--ue); }
+  .r-contact span.sep { color: var(--border); margin: 0 6px; }
+
+  section { margin-top: 34px; }
+  .sec-title {
+    font-size: 13px;
+    color: var(--ue);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+  }
+  .sec-title::before { content: '// '; color: var(--dim); }
+
+  .profile p { max-width: 72ch; }
+
+  /* ---------- experience ---------- */
+  .job { margin-bottom: 22px; }
+  .job:last-child { margin-bottom: 0; }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .job-title {
+    font-family: var(--display);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--bright);
+  }
+  .job-date { color: var(--dim); font-size: 12px; white-space: nowrap; }
+  .job-co { color: var(--ue); font-size: 12px; margin-top: 2px; }
+  .job-awards { color: var(--yellow); font-size: 12px; margin-top: 4px; }
+  .job ul {
+    list-style: none;
+    margin-top: 8px;
+  }
+  .job li { padding-left: 16px; position: relative; margin-bottom: 3px; }
+  .job li::before { content: '▸'; position: absolute; left: 0; color: var(--ue); }
+  .tags { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-size: 11px;
+    color: var(--dim);
+    border: 1px solid var(--border);
+    padding: 2px 8px;
+  }
+
+  /* ---------- projects ---------- */
+  .proj-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .proj {
+    border: 1px solid var(--border);
+    padding: 12px 14px;
+  }
+  .proj-name {
+    font-family: var(--display);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--bright);
+  }
+  .proj-meta { color: var(--ue); font-size: 11px; margin-top: 2px; }
+  .proj p { font-size: 12px; margin-top: 6px; }
+
+  /* ---------- skills ---------- */
+  .skill-row {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .skill-label { color: var(--ue); font-size: 12px; }
+  .skill-items { font-size: 12px; }
+
+  /* ---------- education / languages ---------- */
+  .edu-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .edu-title { font-family: var(--display); font-size: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--bright); }
+  .edu-date { color: var(--dim); font-size: 12px; white-space: nowrap; }
+  .edu-school { color: var(--dim); font-size: 12px; margin-top: 2px; }
+
+  .foot {
+    margin-top: 34px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    color: var(--dim);
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 640px) {
+    .sheet { padding: 28px 22px; }
+    .proj-grid { grid-template-columns: 1fr; }
+    .skill-row { grid-template-columns: 1fr; gap: 2px; }
+    .r-name { font-size: 32px; }
+  }
+
+  /* ---------- print ---------- */
+  @media print {
+    @page { size: A4; margin: 12mm; }
+    body { background: #fff; color: #1a1a1a; font-size: 11px; }
+    .topbar { display: none; }
+    .sheet {
+      background: #fff;
+      border: none;
+      padding: 0;
+      margin: 0;
+      max-width: none;
+    }
+    .r-name { color: #000; font-size: 30px; }
+    .r-role { color: var(--ue-dim); }
+    .r-contact { color: #555; }
+    .r-contact a { color: #1a1a1a; }
+    .r-contact span.sep { color: #bbb; }
+    .sec-title { color: var(--ue-dim); border-bottom-color: #ddd; }
+    .sec-title::before { color: #999; }
+    .job-title, .proj-name, .edu-title { color: #000; }
+    .job-date, .job li, .edu-date, .edu-school { color: #333; }
+    .job-co, .skill-label, .proj-meta { color: var(--ue-dim); }
+    .job-awards { color: #8a6d00; }
+    .job li::before { color: var(--ue-dim); }
+    .tag { color: #555; border-color: #ccc; }
+    .proj { border-color: #ddd; }
+    .proj p, .skill-items { color: #333; }
+    .foot { border-top-color: #ddd; color: #777; }
+    section { margin-top: 22px; }
+    .job, .proj, .skill-row { break-inside: avoid; }
+    .sec-title { break-after: avoid; }
+  }
 </style>
 </head>
 <body>
-<embed src="/David_Espada_CV.pdf" type="application/pdf" width="100%" height="100%">
+
+<div class="topbar">
+  <a class="back" href="/">← dlespada.com</a>
+  <div class="actions">
+    <button class="btn" onclick="window.print()">Print</button>
+    <a class="btn primary" href="/David_Espada_Resume.pdf" target="_blank" rel="noopener">Download PDF</a>
+  </div>
+</div>
+
+<main class="sheet">
+
+  <header>
+    <h1 class="r-name">David Espada</h1>
+    <div class="r-role">Unreal Engine Programmer · C++</div>
+    <div class="r-contact">
+      Spain · Open to relocation &amp; remote
+      <span class="sep">|</span><a href="mailto:davidlespada@gmail.com">davidlespada@gmail.com</a>
+      <span class="sep">|</span><a href="https://www.linkedin.com/in/davidlespada/" target="_blank" rel="noopener">linkedin.com/in/davidlespada</a>
+      <span class="sep">|</span><a href="https://www.dlespada.com/" target="_blank" rel="noopener">dlespada.com</a>
+    </div>
+  </header>
+
+  <section class="profile">
+    <h2 class="sec-title">Profile</h2>
+    <p>Unreal Engine C++ programmer with 5+ years shipping on PC, PS5, and Xbox Series X|S. Led the full C++ architecture of The Occultist (Daedalic Entertainment) — GAS, 3Cs, CommonUI, tech animation, console porting. Currently Senior Gameplay Programmer at GRIP Studios.</p>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Senior Gameplay Programmer</div>
+        <div class="job-date">2025 – Present</div>
+      </div>
+      <div class="job-co">GRIP Studios · Remote</div>
+      <ul>
+        <li>Unannounced AAA multiplayer title in full production; details under NDA.</li>
+        <li>Unreal Engine C++ core gameplay systems and multiplayer replication architecture.</li>
+        <li>Cross-team feature ownership alongside a seasoned AAA team.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">UE5</span><span class="tag">Unreal Engine C++</span><span class="tag">Multiplayer</span><span class="tag">Replication</span>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">Lead Programmer</div>
+        <div class="job-date">Aug 2021 – 2025</div>
+      </div>
+      <div class="job-co">Daloar Studios (formerly Pentakill) · The Occultist</div>
+      <div class="job-awards">Devcom 2023 Blockbuster Award · Best Indie — FreakCon Málaga 2022 · Gamescom 2024</div>
+      <ul>
+        <li>Lead engineer on a AA UE5 narrative horror — shipped April 8, 2026 on PC, PS5, and Xbox Series X|S.</li>
+        <li>Published by Daedalic Entertainment; voiced by Doug Cockle (Geralt of Rivia).</li>
+        <li>Designed and shipped full GAS (Gameplay Ability System) architecture for the entire game.</li>
+        <li>Owned all 3Cs — Character, Camera, Controls — from blank project to ship.</li>
+        <li>Integrated CommonUI; architected technical animation and locomotion systems.</li>
+        <li>Ported the title to PS5 and Xbox Series X/S devkits; handled certification preparation.</li>
+        <li>Hired and mentored junior developers; ran technical interviews.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">GAS</span><span class="tag">3Cs</span><span class="tag">CommonUI</span><span class="tag">Tech Animation</span><span class="tag">PS5</span><span class="tag">Xbox Series X/S</span>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-title">VR Programmer</div>
+        <div class="job-date">Oct 2020 – 2021</div>
+      </div>
+      <div class="job-co">FrameOver</div>
+      <ul>
+        <li>VR experience and interactive prototype for Oculus Quest 2.</li>
+        <li>Built the full VR interaction system from scratch: UI navigation, SDK integration.</li>
+        <li>Android profiling to hit stable FPS targets on-device.</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">UE4</span><span class="tag">Quest 2</span><span class="tag">Android Profiling</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Selected Projects</h2>
+    <div class="proj-grid">
+      <div class="proj">
+        <div class="proj-name">The Yellow Robot</div>
+        <div class="proj-meta">Epic MegaJam 2023 · Winner</div>
+        <p>Sole programmer on the winning entry. Featured in Epic Games' official announcement.</p>
+      </div>
+      <div class="proj">
+        <div class="proj-name">Kibus</div>
+        <div class="proj-meta">Solo · 2019 · #1 on itch.io</div>
+        <p>Solo jam game that hit #1 on itch.io and held the spot for several days.</p>
+      </div>
+      <div class="proj">
+        <div class="proj-name">C.I.E.V</div>
+        <div class="proj-meta">PrimerFrame · 2020 · Diploma Project</div>
+        <p>Sole programmer — base systems, player programming, all UI.</p>
+      </div>
+      <div class="proj">
+        <div class="proj-name">Nodine</div>
+        <div class="proj-meta">Solo · Ongoing</div>
+        <p>Personal project with published devlogs on itch.io.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Technical Skills</h2>
+    <div class="skill-row">
+      <div class="skill-label">Software &amp; Languages</div>
+      <div class="skill-items">Unreal Engine 5 / 4 · Unreal Engine C++ · Blueprints · Python · Perforce · Git</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-label">Gameplay</div>
+      <div class="skill-items">GAS · 3Cs · CommonUI · Slate UI · Behavior Trees · EQS · Anim Programming · Multiplayer</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-label">Platforms</div>
+      <div class="skill-items">PS5 devkit · Xbox Series X/S devkit · Quest 2 / VR · Android profiling</div>
+    </div>
+    <div class="skill-row">
+      <div class="skill-label">Leadership</div>
+      <div class="skill-items">Mentoring · Technical interviewing · Cross-discipline feature ownership</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Education</h2>
+    <div class="edu-head">
+      <div class="edu-title">Diploma in Game Development</div>
+      <div class="edu-date">2019 – 2020</div>
+    </div>
+    <div class="edu-school">PrimerFrame Game Development Programme — Programming, Animation, 3D Art</div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Languages</h2>
+    <p>Native Spanish · Professional English</p>
+  </section>
+
+  <div class="foot">
+    <span>David Espada · Unreal Engine Programmer · C++</span>
+    <span>References available on request</span>
+  </div>
+
+</main>
+
 </body>
 </html>

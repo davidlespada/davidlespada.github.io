@@ -5,10 +5,17 @@ export function injectCovers(): void {
     const card = document.getElementById(id);
     if (!card) return;
 
+    const body = card.querySelector('.project-body');
     const img = document.createElement('img');
     img.className = 'card-cover';
     img.src = src;
     img.alt = '';
-    card.insertBefore(img, card.firstChild);
+    img.loading = 'lazy';
+
+    if (body) {
+      card.insertBefore(img, body);
+    } else {
+      card.insertBefore(img, card.firstChild);
+    }
   });
 }
